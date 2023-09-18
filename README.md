@@ -1,2 +1,2 @@
-# tf-module-rds
-tf-module-rds
+# terraform-modules
+Terraform modules for visalab project
