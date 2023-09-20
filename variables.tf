@@ -7,6 +7,10 @@ variable "db_instance_class" {
   type        = string
   default     = "db.t3.micro"
 }
-
+variable "db_name" {
+  description = "The DB name to create. If omitted, no database is created initially"
+  type        = string
+  default     = null
+}
 # Add more variables as needed
 
