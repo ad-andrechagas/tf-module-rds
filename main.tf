@@ -1,5 +1,5 @@
 resource "aws_db_instance" "rds-lab" {
-  identifier = "var.db_instance_identifier"
+  identifier = "${var.db_instance_identifier}"
 
   allocated_storage    = 20
   storage_type         = "gp2"
