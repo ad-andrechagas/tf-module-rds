@@ -11,8 +11,8 @@ locals {
 }
 
 module "db_subnet_group" {
-  source = "./modules/db_subnet_group"
-
+  #source = "./modules/db_subnet_group"
+  source = "git@github.com:ad-andrechagas/tf-module-dbsubnet-group.git"
   create = local.create_db_subnet_group
 
   name            = coalesce(var.db_subnet_group_name, var.identifier)
@@ -24,7 +24,8 @@ module "db_subnet_group" {
 }
 
 module "db_parameter_group" {
-  source = "./modules/db_parameter_group"
+  #source = "./modules/db_parameter_group"
+  source = "git@github.com:ad-andrechagas/tf-module-db-parameter-group.git"
 
   create = local.create_db_parameter_group
 
@@ -39,7 +40,8 @@ module "db_parameter_group" {
 }
 
 module "db_option_group" {
-  source = "./modules/db_option_group"
+  #source = "./modules/db_option_group"
+  source = "git@github.com:ad-andrechagas/tf-module-dboption-group.git"
 
   create = local.create_db_option_group
 
@@ -57,7 +59,8 @@ module "db_option_group" {
 }
 
 module "db_instance" {
-  source = "./modules/db_instance"
+  #source = "./modules/db_instance"
+  source = "git@github.com:ad-andrechagas/tf-module-dbinstance.git"
 
   create                = local.create_db_instance
   identifier            = var.identifier
